@@ -11,6 +11,8 @@
 		9AC4D0122AAC7A8400AF34D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4D0112AAC7A8400AF34D3 /* ContentView.swift */; };
 		9AC4D0142AAC7A8700AF34D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC4D0132AAC7A8700AF34D3 /* Assets.xcassets */; };
 		9AC4D0172AAC7A8700AF34D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC4D0162AAC7A8700AF34D3 /* Preview Assets.xcassets */; };
+		9AC4D0212AAC7AA900AF34D3 /* hello.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4D01F2AAC7AA900AF34D3 /* hello.cpp */; };
+		9AC4D0232AAC7B8000AF34D3 /* hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4D0222AAC7B8000AF34D3 /* hello.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,10 @@
 		9AC4D0132AAC7A8700AF34D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AC4D0162AAC7A8700AF34D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9AC4D0182AAC7A8700AF34D3 /* Swift_Cpp_Interop_Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swift_Cpp_Interop_Test.entitlements; sourceTree = "<group>"; };
+		9AC4D01E2AAC7AA900AF34D3 /* Swift-Cpp-Interop-Test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Cpp-Interop-Test-Bridging-Header.h"; sourceTree = "<group>"; };
+		9AC4D01F2AAC7AA900AF34D3 /* hello.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hello.cpp; sourceTree = "<group>"; };
+		9AC4D0202AAC7AA900AF34D3 /* hello.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hello.hpp; sourceTree = "<group>"; };
+		9AC4D0222AAC7B8000AF34D3 /* hello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hello.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +60,13 @@
 			children = (
 				9AC4D00F2AAC7A8400AF34D3 /* Swift_Cpp_Interop_TestApp.swift */,
 				9AC4D0112AAC7A8400AF34D3 /* ContentView.swift */,
+				9AC4D01F2AAC7AA900AF34D3 /* hello.cpp */,
+				9AC4D0202AAC7AA900AF34D3 /* hello.hpp */,
 				9AC4D0132AAC7A8700AF34D3 /* Assets.xcassets */,
 				9AC4D0182AAC7A8700AF34D3 /* Swift_Cpp_Interop_Test.entitlements */,
 				9AC4D0152AAC7A8700AF34D3 /* Preview Content */,
+				9AC4D01E2AAC7AA900AF34D3 /* Swift-Cpp-Interop-Test-Bridging-Header.h */,
+				9AC4D0222AAC7B8000AF34D3 /* hello.swift */,
 			);
 			path = "Swift-Cpp-Interop-Test";
 			sourceTree = "<group>";
@@ -101,6 +111,7 @@
 				TargetAttributes = {
 					9AC4D00B2AAC7A8400AF34D3 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -140,6 +151,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AC4D0122AAC7A8400AF34D3 /* ContentView.swift in Sources */,
+				9AC4D0212AAC7AA900AF34D3 /* hello.cpp in Sources */,
+				9AC4D0232AAC7B8000AF34D3 /* hello.swift in Sources */,
 				9AC4D0102AAC7A8400AF34D3 /* Swift_Cpp_Interop_TestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Swift-Cpp-Interop-Test/Swift_Cpp_Interop_Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -288,6 +302,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.simonfalke.Swift-Cpp-Interop-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift-Cpp-Interop-Test/Swift-Cpp-Interop-Test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -297,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Swift-Cpp-Interop-Test/Swift_Cpp_Interop_Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -315,6 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.simonfalke.Swift-Cpp-Interop-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift-Cpp-Interop-Test/Swift-Cpp-Interop-Test-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
